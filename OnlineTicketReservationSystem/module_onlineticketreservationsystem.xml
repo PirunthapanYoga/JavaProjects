@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_onlineticketreservationsystem" default="compile.module.onlineticketreservationsystem">
+    <dirname property="module.onlineticketreservationsystem.basedir"
+             file="${ant.file.module_onlineticketreservationsystem}"/>
+
+    <property name="module.jdk.home.onlineticketreservationsystem" value="${project.jdk.home}"/>
+    <property name="module.jdk.bin.onlineticketreservationsystem" value="${project.jdk.bin}"/>
+    <property name="module.jdk.classpath.onlineticketreservationsystem" value="${project.jdk.classpath}"/>
+
+    <property name="compiler.args.onlineticketreservationsystem"
+              value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+
+    <property name="onlineticketreservationsystem.output.dir"
+              value="${module.onlineticketreservationsystem.basedir}/out/production/OnlineTicketReservationSystem"/>
+    <property name="onlineticketreservationsystem.testoutput.dir"
+              value="${module.onlineticketreservationsystem.basedir}/out/test/OnlineTicketReservationSystem"/>
+
+    <path id="onlineticketreservationsystem.module.bootclasspath">
+        <!-- Paths to be included in compilation bootclasspath -->
+    </path>
+
+    <path id="onlineticketreservationsystem.module.production.classpath">
+        <path refid="${module.jdk.classpath.onlineticketreservationsystem}"/>
+        <path refid="library.json-simple-1.1.classpath"/>
+    </path>
+
+    <path id="onlineticketreservationsystem.runtime.production.module.classpath">
+        <pathelement location="${onlineticketreservationsystem.output.dir}"/>
+        <path refid="library.json-simple-1.1.classpath"/>
+    </path>
+
+    <path id="onlineticketreservationsystem.module.classpath">
+        <path refid="${module.jdk.classpath.onlineticketreservationsystem}"/>
+        <pathelement location="${onlineticketreservationsystem.output.dir}"/>
+        <path refid="library.json-simple-1.1.classpath"/>
+    </path>
+
+    <path id="onlineticketreservationsystem.runtime.module.classpath">
+        <pathelement location="${onlineticketreservationsystem.testoutput.dir}"/>
+        <pathelement location="${onlineticketreservationsystem.output.dir}"/>
+        <path refid="library.json-simple-1.1.classpath"/>
+    </path>
+
+
+    <patternset id="excluded.from.module.onlineticketreservationsystem">
+        <patternset refid="ignored.files"/>
+    </patternset>
+
+    <patternset id="excluded.from.compilation.onlineticketreservationsystem">
+        <patternset refid="excluded.from.module.onlineticketreservationsystem"/>
+    </patternset>
+
+    <path id="onlineticketreservationsystem.module.sourcepath">
+        <dirset dir="${module.onlineticketreservationsystem.basedir}">
+            <include name="src"/>
+        </dirset>
+    </path>
+
+
+    <target name="compile.module.onlineticketreservationsystem"
+            depends="compile.module.onlineticketreservationsystem.production,compile.module.onlineticketreservationsystem.tests"
+            description="Compile module OnlineTicketReservationSystem"/>
+
+    <target name="compile.module.onlineticketreservationsystem.production" depends="register.custom.compilers"
+            description="Compile module OnlineTicketReservationSystem; production classes">
+        <mkdir dir="${onlineticketreservationsystem.output.dir}"/>
+        <javac2 destdir="${onlineticketreservationsystem.output.dir}" debug="${compiler.debug}"
+                nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true"
+                executable="${module.jdk.bin.onlineticketreservationsystem}/javac">
+            <compilerarg line="${compiler.args.onlineticketreservationsystem}"/>
+            <bootclasspath refid="onlineticketreservationsystem.module.bootclasspath"/>
+            <classpath refid="onlineticketreservationsystem.module.production.classpath"/>
+            <src refid="onlineticketreservationsystem.module.sourcepath"/>
+            <patternset refid="excluded.from.compilation.onlineticketreservationsystem"/>
+        </javac2>
+
+        <copy todir="${onlineticketreservationsystem.output.dir}">
+            <fileset dir="${module.onlineticketreservationsystem.basedir}/src">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compile.module.onlineticketreservationsystem.tests"
+            depends="register.custom.compilers,compile.module.onlineticketreservationsystem.production"
+            description="compile module OnlineTicketReservationSystem; test classes" unless="skip.tests"/>
+
+    <target name="clean.module.onlineticketreservationsystem" description="cleanup module">
+        <delete dir="${onlineticketreservationsystem.output.dir}"/>
+        <delete dir="${onlineticketreservationsystem.testoutput.dir}"/>
+    </target>
+</project>

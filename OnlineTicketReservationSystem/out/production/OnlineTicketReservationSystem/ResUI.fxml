@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="800.0" minWidth="1200.0" prefHeight="518.0" prefWidth="874.0" style="-fx-background-color: #00F8D5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerRes">
+    <Pane fx:id="seatPan" layoutX="15.0" layoutY="97.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="651.0" prefWidth="977.0" scaleShape="false" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;">
+        <cursor>
+            <Cursor fx:constant="DEFAULT" />
+        </cursor>
+    </Pane>
+    <Pane layoutX="1002.0" layoutY="14.0" prefHeight="773.0" prefWidth="186.0" style="-fx-border-color: #000000;">
+        <Text fill="#00d5ff" fontSmoothingType="LCD" layoutX="2.0" layoutY="441.0" stroke="BLACK" strokeType="OUTSIDE" text="Total Seats" textAlignment="CENTER" wrappingWidth="116.00003242492676">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#ff7400" layoutX="28.0" layoutY="396.0" stroke="#ff9f00" strokeWidth="0.0" text="Reservations" underline="true">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text fill="#00d5ff" fontSmoothingType="LCD" layoutY="565.0" stroke="BLACK" strokeType="OUTSIDE" text="Sub Total" textAlignment="CENTER" wrappingWidth="185.0000023841858">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#00d5ff" fontSmoothingType="LCD" layoutX="34.0" layoutY="473.0" stroke="BLACK" strokeType="OUTSIDE" text="450 LKR">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#00d5ff" fontSmoothingType="LCD" layoutX="34.0" layoutY="503.0" stroke="BLACK" strokeType="OUTSIDE" text="750 LKR">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Line endX="100.0" layoutX="86.0" layoutY="368.0" startX="-84.0" />
+        <Text fill="#00d5ff" fontSmoothingType="LCD" layoutX="109.0" layoutY="474.0" stroke="BLACK" strokeType="OUTSIDE" text="X">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#00d5ff" fontSmoothingType="LCD" layoutX="109.0" layoutY="504.0" stroke="BLACK" strokeType="OUTSIDE" text="X">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#00d5ff" fontSmoothingType="LCD" layoutX="112.0" layoutY="440.0" stroke="BLACK" strokeType="OUTSIDE" text=":" textAlignment="CENTER" wrappingWidth="7.078135013580322">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text fx:id="seatsTotal" fill="#00d5ff" fontSmoothingType="LCD" layoutX="128.0" layoutY="440.0" stroke="BLACK" strokeType="OUTSIDE" textAlignment="CENTER" wrappingWidth="55.660151958465576">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text fx:id="seatSet2" fill="#00d5ff" fontSmoothingType="LCD" layoutX="133.0" layoutY="503.0" stroke="BLACK" strokeType="OUTSIDE" textAlignment="CENTER" wrappingWidth="45.72558403015137">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text fx:id="subTotal" fill="#00d5ff" fontSmoothingType="LCD" layoutX="5.0" layoutY="608.0" stroke="BLACK" strokeType="OUTSIDE" textAlignment="CENTER" underline="true" wrappingWidth="167.80664491653442">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Text>
+        <Button fx:id="checkOut" layoutX="21.0" layoutY="651.0" mnemonicParsing="false" onAction="#finalBooking" prefHeight="25.0" prefWidth="149.0" text="Check Out" />
+        <Text fill="#3902f5" fontSmoothingType="LCD" layoutX="11.0" layoutY="264.0" stroke="#ff2700" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Seats in LKR" underline="true" wrappingWidth="127.00002193450928">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3902f5" fontSmoothingType="LCD" layoutX="11.0" layoutY="291.0" stroke="#ff2700" strokeType="OUTSIDE" strokeWidth="0.0" text="Row A - I" underline="true" wrappingWidth="100.80467462539673">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3902f5" fontSmoothingType="LCD" layoutX="116.0" layoutY="290.0" stroke="#ff2700" strokeType="OUTSIDE" strokeWidth="0.0" text="450 LKR">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3902f5" fontSmoothingType="LCD" layoutX="10.0" layoutY="317.0" stroke="#ff2700" strokeType="OUTSIDE" strokeWidth="0.0" text="Row J - K" underline="true" wrappingWidth="116.00002193450928">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3902f5" fontSmoothingType="LCD" layoutX="115.0" layoutY="316.0" stroke="#ff2700" strokeType="OUTSIDE" strokeWidth="0.0" text="750LKR">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3902f5" fontSmoothingType="LCD" layoutX="88.0" layoutY="291.0" stroke="#030303" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3902f5" fontSmoothingType="LCD" layoutX="89.0" layoutY="316.0" stroke="#030303" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3902f5" fontSmoothingType="LCD" layoutX="15.0" layoutY="352.0" stroke="#ff2700" strokeType="OUTSIDE" strokeWidth="0.0" text="LKR - SRI LANKAN RUPEE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3902f5" layoutX="45.0" layoutY="168.0" stroke="#f5c107" strokeType="INSIDE" strokeWidth="0.0" text="Show Time" textAlignment="CENTER" underline="true" wrappingWidth="100.8046875">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fill="#3902f5" layoutX="42.0" layoutY="93.0" stroke="#f5be0b" strokeType="INSIDE" strokeWidth="0.0" text="Date" textAlignment="CENTER" underline="true" wrappingWidth="100.8046875" />
+        <Text fx:id="seatSet1" fill="#00d5ff" fontSmoothingType="LCD" layoutX="128.0" layoutY="473.0" stroke="BLACK" strokeType="OUTSIDE" textAlignment="CENTER" wrappingWidth="55.66016435623169">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+      <Text fx:id="date" fill="#00d5ff" fontSmoothingType="LCD" layoutX="11.0" layoutY="116.0" stroke="BLACK" strokeType="OUTSIDE" textAlignment="CENTER" wrappingWidth="167.80664920806885">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="time" fill="#00d5ff" fontSmoothingType="LCD" layoutX="10.0" layoutY="191.0" stroke="BLACK" strokeType="OUTSIDE" textAlignment="CENTER" wrappingWidth="167.80664920806885">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+    </Pane>
+    <Button fx:id="reset" layoutX="427.0" layoutY="761.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="149.0" text="Reset" />
+   <Button graphicTextGap="0.0" layoutY="14.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="1003.0" style="-fx-background-color: #FBFBBF; -fx-border-color: #000000;" text="SCREEN THIS SIDE" textAlignment="CENTER">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </Button>
+</AnchorPane>

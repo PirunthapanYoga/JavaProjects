@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="backPane" minHeight="800.0" minWidth="1200.0"
+            style="-fx-background-color: #CCCCCC;" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controller">
+    <children>
+        <Pane prefHeight="742.0" prefWidth="475.0" style="-fx-background-color: #550055;"/>
+        <Pane layoutY="740.0" prefHeight="60.0" prefWidth="1200.0" style="-fx-background-color: #550055;"/>
+        <Pane prefHeight="60.0" prefWidth="1200.0" style="-fx-background-color: #550055;"/>
+        <Pane fx:id="imagePane" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="800.0" prefWidth="482.0">
+            <children>
+                <ImageView fx:id="imageField" fitHeight="675.0" fitWidth="450.0" layoutX="15.0" layoutY="8.0"
+                           pickOnBounds="true" preserveRatio="true" smooth="false"/>
+                <Polygon fx:id="next" blendMode="HARD_LIGHT" fill="#540054" focusTraversable="true" layoutX="423.0"
+                         layoutY="350.0" onMouseClicked="#NextMovie" onMouseEntered="#nextOpaIncr"
+                         onMouseExited="#nextOpaDecr"
+                         points="-12.573080062866211, 29.42691993713379, 30.098451614379883, 29.52536964416504, 9.972497940063477, -37.44712829589844"
+                         rotate="90.0" stroke="BLACK" strokeType="OUTSIDE"/>
+                <Polygon fx:id="prev" blendMode="HARD_LIGHT" fill="#540054" focusTraversable="true" layoutX="40.0"
+                         layoutY="350.0" onMouseClicked="#previousMovie" onMouseEntered="#prevOpaIncr"
+                         onMouseExited="#prevOpaDecr"
+                         points="-12.573080062866211, 29.42691993713379, 30.098451614379883, 29.52536964416504, 9.972497940063477, -37.44712829589844"
+                         rotate="270.0" stroke="BLACK" strokeType="OUTSIDE"/>
+                <TextArea fx:id="textScroll" blendMode="MULTIPLY" editable="false" layoutX="15.0" layoutY="683.0"
+                          prefHeight="110.0" prefWidth="450.0" style="-fx-background-color: #550055;" wrapText="true">
+                    <font>
+                        <Font name="Serif Regular" size="12.0"/>
+                    </font>
+                </TextArea>
+            </children>
+        </Pane>
+        <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="710.0" layoutX="477.0" layoutY="131.0"
+                   onMouseClicked="#playTrailer" smooth="false"/>
+        <Pane fx:id="play" layoutX="798.0" layoutY="288.0" onMouseClicked="#playTrailer"
+              onMouseEntered="#playOpacityIncr" onMouseExited="#playOpacityDecr" prefHeight="86.0" prefWidth="79.0">
+            <children>
+                <Circle fill="#1f93ff00" layoutX="40.0" layoutY="43.0" radius="39.0" stroke="BLACK"
+                        style="-fx-fill: #550055;"/>
+                <Polygon fill="DODGERBLUE" layoutX="46.0" layoutY="53.0" rotate="90.0" scaleX="0.5" scaleY="0.5"
+                         scaleZ="0.5">
+                    <points>
+                        <Double fx:value="-50.0"/>
+                        <Double fx:value="40.0"/>
+                        <Double fx:value="50.0"/>
+                        <Double fx:value="40.0"/>
+                        <Double fx:value="0.0"/>
+                        <Double fx:value="-60.0"/>
+                    </points>
+                </Polygon>
+            </children>
+        </Pane>
+        <Pane fx:id="pause" layoutX="798.0" layoutY="288.0" onMouseClicked="#pauseTrailer"
+              onMouseEntered="#pauseOpacityIncr" onMouseExited="#pauseOpacityDecr" prefHeight="86.0" prefWidth="79.0">
+            <children>
+                <Circle fill="#1f93ff00" layoutX="40.0" layoutY="43.0" radius="39.0" stroke="BLACK"
+                        style="-fx-fill: #550055;"/>
+                <Line endX="-100.0" endY="-44.0" layoutX="131.0" layoutY="65.0" startX="-100.0" stroke="DODGERBLUE"
+                      strokeWidth="5.0"/>
+                <Line endX="-100.0" endY="-44.0" layoutX="146.0" layoutY="65.0" startX="-100.0" stroke="DODGERBLUE"
+                      strokeWidth="5.0"/>
+            </children>
+        </Pane>
+        <Text blendMode="HARD_LIGHT" fill="RED" layoutX="548.0" layoutY="117.0" stroke="BLACK" strokeWidth="2.0"
+              text="RAPID RESERVE 404" textAlignment="CENTER">
+            <font>
+                <Font name="Serif Italic" size="64.0"/>
+            </font>
+        </Text>
+        <Pane layoutX="1189.0" layoutY="60.0" prefHeight="682.0" prefWidth="11.0"
+              style="-fx-background-color: #550055;"/>
+        <Text fill="#550055" layoutX="787.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHOOSE SHOW">
+            <font>
+                <Font name="Serif Regular" size="14.0"/>
+            </font>
+        </Text>
+        <Button fx:id="reserveBtn" layoutX="783.0" layoutY="696.0" mnemonicParsing="false" onAction="#reserve"
+                prefHeight="25.0" prefWidth="109.0" style="-fx-border-color: #FF0000;" text="Reserve"
+                textFill="#550055">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+        <Text fx:id="time" fontSmoothingType="LCD" layoutX="745.0" layoutY="578.0" strokeType="OUTSIDE"
+              strokeWidth="0.0" textAlignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Text>
+        <Button fx:id="today" layoutX="481.0" layoutY="583.0" mnemonicParsing="false" prefWidth="200.0"
+                style="-fx-border-color: #FF0000;" textFill="#550055"/>
+        <Button fx:id="time1" layoutX="583.0" layoutY="635.0" mnemonicParsing="false" prefWidth="200.0"
+                style="-fx-border-color: #FF0000;" textFill="#550055"/>
+        <Button fx:id="dayAfterTomorrow" layoutX="986.0" layoutY="583.0" mnemonicParsing="false" prefWidth="200.0"
+                style="-fx-border-color: #FF0000;" textFill="#550055"/>
+        <Button fx:id="tomorrow" layoutX="738.0" layoutY="583.0" mnemonicParsing="false" prefWidth="200.0"
+                style="-fx-border-color: #FF0000;" textFill="#550055"/>
+        <Button fx:id="time2" layoutX="892.0" layoutY="635.0" mnemonicParsing="false" prefWidth="200.0"
+                style="-fx-border-color: #FF0000;" textFill="#550055"/>
+        <Text fill="#550055" layoutX="481.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE">
+            <font>
+                <Font name="Serif Regular" size="14.0"/>
+            </font>
+        </Text>
+        <Text fill="#550055" layoutX="581.0" layoutY="630.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME">
+            <font>
+                <Font name="Serif Regular" size="14.0"/>
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
