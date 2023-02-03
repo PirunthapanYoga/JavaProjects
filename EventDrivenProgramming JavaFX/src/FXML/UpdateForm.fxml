@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #FFFFFF;"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controllers.UpdateController">
+    <Pane blendMode="MULTIPLY" prefHeight="50.0" prefWidth="1200.0" style="-fx-background-color: #0000FF;"/>
+    <Pane blendMode="MULTIPLY" prefHeight="800.0" prefWidth="50.0" style="-fx-background-color: #FF0000;"/>
+    <Text fontSmoothingType="LCD" layoutX="467.0" layoutY="118.0" text="USER PROFILE" textAlignment="CENTER">
+        <font>
+            <Font name="Serif Bold" size="36.0"/>
+        </font>
+    </Text>
+    <Pane blendMode="MULTIPLY" layoutX="575.0" layoutY="175.0" prefHeight="1200.0" prefWidth="50.0" rotate="90.0"
+          style="-fx-background-color: #00FF00;"/>
+    <Pane layoutX="114.0" layoutY="150.0" prefHeight="491.0" prefWidth="973.0"
+          style="-fx-background-color: #EEEEFF; -fx-border-color: #550055;">
+        <TextField fx:id="idNumber" editable="false" layoutX="201.0" layoutY="321.0" prefWidth="300.0"/>
+        <TextField fx:id="lastName" layoutX="201.0" layoutY="121.0" prefWidth="300.0"/>
+        <Label layoutX="27.0" layoutY="170.0" prefHeight="27.0" prefWidth="95.0" text="Civil Status"
+               textAlignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="27.0" layoutY="270.0" prefHeight="27.0" prefWidth="114.0" text="Date OF Birth"
+               textAlignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="userName" editable="false" layoutX="201.0" layoutY="29.0" prefWidth="300.0"/>
+        <Label layoutX="27.0" layoutY="28.0" prefHeight="27.0" prefWidth="95.0" text="User Name" textAlignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <Line endX="100.0" layoutX="16.0" layoutY="244.0" rotate="90.0" scaleX="2.2" startX="-100.0"/>
+        <Label layoutX="27.0" layoutY="70.0" prefHeight="27.0" prefWidth="95.0" text="First Name"
+               textAlignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="27.0" layoutY="370.0" prefHeight="27.0" prefWidth="141.0" text="Contact Number"
+               textAlignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="27.0" layoutY="220.0" prefHeight="27.0" prefWidth="95.0" text="Gender" textAlignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="27.0" layoutY="320.0" prefHeight="27.0" prefWidth="114.0" text="ID Number"
+               textAlignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="27.0" layoutY="120.0" prefHeight="27.0" prefWidth="95.0" text="Last Name"
+               textAlignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="firstName" layoutX="201.0" layoutY="71.0" prefWidth="300.0"/>
+        <TextField fx:id="eMail" editable="false" layoutX="201.0" layoutY="421.0" prefWidth="300.0"/>
+        <Label layoutX="27.0" layoutY="420.0" prefHeight="0.0" prefWidth="45.0" text="Email" textAlignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <Text fx:id="usernameValidity" layoutX="560.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Text>
+        <Text fx:id="emailValidity" layoutX="516.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
+        <TextField fx:id="contactNumber" layoutX="203.0" layoutY="371.0" prefHeight="25.0" prefWidth="174.0"
+                   promptText="0771234567"/>
+        <ComboBox fx:id="civilStatus" layoutX="201.0" layoutY="171.0" prefHeight="25.0" prefWidth="174.0"
+                  promptText="Select "/>
+        <ImageView fx:id="imgBack" fitHeight="306.0" fitWidth="328.0" layoutX="632.0" layoutY="81.0" pickOnBounds="true"
+                   preserveRatio="true"/>
+        <ComboBox fx:id="gender" layoutX="201.0" layoutY="222.0" prefHeight="25.0" prefWidth="174.0"
+                  promptText="Select"/>
+        <TextField fx:id="dateOfBirth" editable="false" layoutX="201.0" layoutY="271.0" prefWidth="300.0"/>
+    </Pane>
+    <Pane blendMode="MULTIPLY" layoutX="1150.0" prefHeight="800.0" prefWidth="50.0"
+          style="-fx-background-color: #FF0000;"/>
+    <Button layoutX="965.0" layoutY="685.0" mnemonicParsing="false" onAction="#update" prefWidth="100.0" text="UPDATE">
+        <font>
+            <Font name="Serif Regular" size="14.0"/>
+        </font>
+    </Button>
+</AnchorPane>

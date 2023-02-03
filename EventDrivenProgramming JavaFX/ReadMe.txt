@@ -1,0 +1,1 @@
+This is a javaFx UI application for user registration in array and display user
